@@ -42,8 +42,14 @@ const Header = () => {
                     <LinkContainer to='/profile'>
                       <NavDropdown.Item>Profile</NavDropdown.Item>
                     </LinkContainer>
-                    <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                    {/* <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item> */}
                   </NavDropdown>
+                  <Button
+                    className='animated-gradient-button'
+                    onClick={logoutHandler}
+                  >
+                    Logout
+                  </Button>
                 </>
               ) : (
                 <>

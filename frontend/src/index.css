@@ -11,7 +11,13 @@
 }
 
 .animated-gradient-button {
-  background: linear-gradient(90deg, rgba(0,212,255,1) 12%, rgba(9,9,121,1) 60%, rgba(7,7,98,1) 77%, rgba(2,0,36,1) 97%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 12%,
+    rgba(9, 9, 121, 1) 60%,
+    rgba(7, 7, 98, 1) 77%,
+    rgba(2, 0, 36, 1) 97%
+  );
   background-size: 200% auto;
   color: white;
   border: 0;
@@ -24,3 +30,33 @@
 .animated-gradient-button:hover {
   animation: animated-gradient 3s linear infinite;
 }
+
+.bg {
+  position: relative;
+  height: auto;
+}
+
+.bg::before {
+  margin: auto;
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:0;
+  margin-top: 400px;
+  height: 130%;
+  background: radial-gradient(circle at right, #452bc8, #2ab3d2, #2ab3d2);
+  border-radius: 50% 50% 1% 1%;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+/* body {
+  background-image: url('https://i.imgur.com/DhzMedB.jpg');
+  height: auto;
+  width:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

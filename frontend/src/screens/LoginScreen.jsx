@@ -36,7 +36,7 @@ const LoginScreen = () => {
     }
   }
   return (
-    <>
+    <div>
       <FormContainer>
         <h4 style={{ textAlign: 'center' }}>Welcome Back!</h4>
         <Form onSubmit={submitHandler}>
@@ -58,7 +58,7 @@ const LoginScreen = () => {
               onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
-          {isLoading && <Loader/>}
+          {isLoading && <Loader />}
           <Button
             type='submit'
             className='animated-gradient-button full-width-button mt-3'
@@ -67,12 +67,12 @@ const LoginScreen = () => {
           </Button>
         </Form>
       </FormContainer>
-      <Row className='py-3' style={{ textAlign: 'center' }}>
+      <Row className='py-3' style={{ textAlign: 'center', position: 'relative'}}>
         <Col>
-          <Link to='/register'>Forgot your password?</Link>
+          <Link style={{ color: 'white' }} to='/register'>Forgot your password?</Link>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 
